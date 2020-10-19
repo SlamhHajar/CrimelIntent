@@ -75,7 +75,7 @@ class CrimeListFragment:Fragment() {
 //                 .show()
 //         }
             titleTextView.text = this.crime.title
-            dateTextView.text = this.crime.date.toString()
+            dateTextView.text = DateFormat.getDateInstance(DateFormat.FULL).format(this.crime.date).toString()
             solvedImageView.visibility = if (crime.isSolved) {
                 View.VISIBLE
             } else {
